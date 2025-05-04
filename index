@@ -1,0 +1,153 @@
+<!-- index.html - トップページ -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>県立楓ヶ丘高等学校 公式ホームページ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>県立楓ヶ丘高等学校</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">学校案内</a></li>
+        <li><a href="about.html">校内紹介</a></li>
+        <li><a href="news.html">お知らせ</a></li>
+        <li><a href="voices.html">卒業生の声</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="slider">
+      <img src="img/banner1.jpg" alt="校舎前景">
+      <img src="img/banner2.jpg" alt="体育館" class="glitch"> <!-- 変な画像 -->
+      <img src="img/banner3.jpg" alt="教室">
+    </div>
+    <section>
+      <h2>今月の予定</h2>
+      <p>2023年11月 → <span class="strike">2022年11月</span></p>
+    </section>
+    <section>
+      <h2>校長挨拶</h2>
+      <p>――皆さん、ようこそ。楓ヶ丘では静けさと調和を大切にしています。</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; Kaedegaoka High School</p>
+  </footer>
+</body>
+</html>
+
+<!-- about.html - 校内紹介 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>校内紹介 - 楓ヶ丘高校</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h2>校舎紹介</h2>
+    <div class="gallery">
+      <figure><img src="img/classroom_day.jpg" alt="教室 昼" /><figcaption>教室（昼）</figcaption></figure>
+      <figure><img src="img/hall_shadow.jpg" alt="影のある廊下" class="weird-shadow" /><figcaption>廊下（撮影：不明）</figcaption></figure>
+      <figure><img src="img/gym_night.jpg" alt="体育館 夜" /><figcaption>体育館（夜）</figcaption></figure>
+    </div>
+  </main>
+</body>
+</html>
+
+<!-- news.html - お知らせ一覧 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>お知らせ - 楓ヶ丘高校</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h2>お知らせ一覧</h2>
+    <ul class="news-list">
+      <li>2023/11/01 - 文化祭のお知らせ</li>
+      <li>2023/10/22 - 体育大会のお知らせ</li>
+      <li class="private"><a href="log6.html">非公開通知：校内関係者のみ</a></li>
+    </ul>
+  </main>
+</body>
+</html>
+
+<!-- voices.html - 生徒の声 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>卒業生の声 - 楓ヶ丘高校</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h2>卒業生の声</h2>
+    <div class="voice">
+      <h3>3年2組 Sさん</h3>
+      <p>「先生たちも優しくて、行事もたくさんあって、毎日が楽しかったです」</p>
+    </div>
+    <div class="voice">
+      <h3>2年1組 Kくん</h3>
+      <p>「図書室の隅には近づかない方がいい。誰かが見ている」</p>
+    </div>
+    <div class="voice">
+      <h3>—さん（所属不明）</h3>
+      <p>「たすけて」</p>
+    </div>
+  </main>
+</body>
+</html>
+
+<!-- style.css -->
+body {
+  font-family: 'Yu Gothic', sans-serif;
+  background-color: #f8f8f8;
+  color: #111;
+  margin: 0;
+  padding: 0;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+nav li {
+  margin: 0 1em;
+}
+.slider img {
+  width: 100%;
+  max-height: 300px;
+}
+img.glitch {
+  animation: glitch 2s infinite;
+}
+@keyframes glitch {
+  0% { filter: none; }
+  50% { filter: hue-rotate(90deg) contrast(200%); }
+  100% { filter: none; }
+}
+.strike {
+  text-decoration: line-through;
+  color: #999;
+}
+.news-list li.private a {
+  color: gray;
+  pointer-events: auto;
+}
+.weird-shadow {
+  filter: brightness(70%) contrast(120%);
+}
+.voice p:last-child {
+  font-style: italic;
+  color: darkred;
+}
